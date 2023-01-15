@@ -16,4 +16,4 @@ LuotiNumber = float(input("Anna luodit: "))
 Massa = LuotiNumber*13.3 + NaulaNumber*32*13.3 + LeiviskäNumber*20*32*13.3
 
 print(f"Massa nykymittojen mukaan: {int(Massa/1000.0)} kilogramma "
-      f"ja {(Massa-int(Massa/1000.0)*1000.0):0.2f} gramma.")
+      f"ja {(Massa-int(Massa/1000.0)*1000.0):.2f} gramma.")
