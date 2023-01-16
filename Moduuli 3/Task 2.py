@@ -10,13 +10,13 @@ C on ikkunaton hytti autokannen alapuolella.
 Jos käyttäjä syöttää kelvottoman hyttiluokan, ohjelma tulostaa Virheellinen hyttiluokka.
 """
 HyttiLuokka = input("Anna hyttiluokan: ")
-if HyttiLuokka == "A":
+if HyttiLuokka == "A" or HyttiLuokka == "a":
     print ("A on ikkunallinen hytti autokannen yläpuolella.")
-elif HyttiLuokka == "B":
+elif HyttiLuokka == "B" or HyttiLuokka == "b":
     print ("B on ikkunaton hytti autokannen yläpuolella.")
-elif HyttiLuokka == "C":
+elif HyttiLuokka == "C" or HyttiLuokka == "c":
     print ("C on ikkunaton hytti autokannen alapuolella.")
-elif HyttiLuokka == "LUX":
+elif HyttiLuokka == "LUX" or HyttiLuokka == "lux" or HyttiLuokka == "Lux":
     print("LUX on parvekkeellinen hytti yläkannella.")
 else:
     print("Virheellinen hyttiluokka")
