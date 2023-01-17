@@ -4,15 +4,15 @@ Vuosi on karkausvuosi, jos se on jaollinen neljällä.
 Sadalla jaolliset vuodet ovat karkausvuosia vain jos ne ovat jaollisia myös neljälläsadalla.
 """
 
-Vuosi = float(input("Anna vuosi: "))
+Vuosi = int(input("Anna vuosi: "))
 
 if Vuosi % 100 == 0:
     if Vuosi % 400 == 0:
         print(f"{Vuosi} on karkausvuosi.")
     else:
-        print(f"{Vuosi} ei ole karkavuotta.")
+        print(f"{Vuosi} ei ole karkavuosi.")
 elif Vuosi % 4 == 0:
     print(f"{Vuosi} on karkausvuosi.")
 else:
-    print(f"{Vuosi} ei ole karkavuotta.")
+    print(f"{Vuosi} ei ole karkavuosi.")
 

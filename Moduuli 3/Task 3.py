@@ -9,7 +9,7 @@ Miehen normaali hemoglobiiniarvo on välillä 134-195 g/l.
 SukuPuoli = input ("Anna sinun sukupuolisi (M tai N): ")
 hemArvo = float(input ("Anna sinun hemoglobiinarvon (g/l): "))
 
-if SukuPuoli == "M":
+if SukuPuoli == "M" or SukuPuoli == "m":
     if hemArvo < 134:
         print ("Sinun gemoglobiinarvon on alhainen miehelle.")
     elif hemArvo > 195:
@@ -17,9 +17,11 @@ if SukuPuoli == "M":
     else:
         print("Sinulla on normaali gemoglobiinarvoa.")
 # naiset
-elif hemArvo < 117:
+elif hemArvo < 117 and (SukuPuoli == "N" or SukuPuoli == "n"):
     print ("Sinun gemoglobiinarvon on alhainen naisille.")
-elif hemArvo > 175:
+elif hemArvo > 175 and (SukuPuoli == "N" or SukuPuoli == "n"):
     print("Sinun gemoglobiinarvon on korkea naisille.")
-else:
+elif SukuPuoli == "N" or SukuPuoli == "n":
     print("Sinulla on normaali gemoglobiinarvoa.")
+else:
+    print ("Virheellinen sukupuoli.")
