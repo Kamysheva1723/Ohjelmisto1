@@ -19,8 +19,15 @@ laskennan edellä kuvatulla menetelmällä. Lopuksi ohjelma tulostaa piin likiar
 (Huomaa, että jokaisesta arvotusta pisteestä (x,y) on helppoa testata
 onko se yksikköympyrän A sisällä: riittää testata, toteuttaako piste epäyhtälön x^2+y^2<1.)
 """
+import random
 
-x = random.unform(-1, 1)
-y = random.unform(-1, 1)
+counter = 1
+n = 0
 
-if x^2+y^2<=1
+while counter <= 1000000:
+    x = random.uniform(-1, 1)
+    y = random.uniform(-1, 1)
+    if x**2+y**2 < 1:
+        n += 1
+    counter += 1
+print (f"Tuloksena oleva pi:n arvo on {n/250000.0:.10f}.")
