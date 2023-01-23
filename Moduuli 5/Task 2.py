@@ -8,15 +8,17 @@ argumentiksi reverse=True.
 
 UserValue = input("Anna luku: ")
 Values = []
-if UserValue != "":
-    while UserValue != "":
-        Values.append(float(UserValue))
-        UserValue = input("Anna luku: ")
+IndexMax = 0
 
-    Values.sort(reverse=True)
+while UserValue != "":
+      Values.append(float(UserValue))
+      UserValue = input("Anna luku: ")
+      IndexMax += 1
 
-    for i in range(0,5):
-        print(Values[i])
+Values.sort(reverse=True)
+
+for i in range(0,min(IndexMax,5)):
+    print(Values[i])
 
 print("The end.")
 
