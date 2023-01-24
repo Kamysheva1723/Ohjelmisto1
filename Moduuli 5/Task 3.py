@@ -9,6 +9,7 @@ koska se voidaan jakaa tasan myös luvulla 3 tai luvulla 7.
 
 N = int(input("Anna kokonaisluku: "))
 
+#Jos luku on pariton, se ei ole jaollinen parillisilla luvuilla.
 if N % 2 != 0:
     Step = 2
     d = 3
@@ -16,6 +17,7 @@ else:
     Step = 1
     d = 2
 
+#d on pienin jakaja, joka ei voi olla suurempi kuin annetun luvun neliöjuuri
 while d * d <= N and N % d != 0:
     d += Step
 
@@ -24,7 +26,9 @@ while d * d <= N and N % d != 0:
 
 if  N == 1:
     print("1 ei ole alkuluku.")
+
 elif d * d > N:
     print(f"Sinun luku {N} on alkuluku.")
+
 else:
     print(f"Sinun luku {N} ei ole alkuluku. Luku {d} on sen jakaja.")
