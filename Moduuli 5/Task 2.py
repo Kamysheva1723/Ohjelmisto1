@@ -5,10 +5,10 @@ Lopuksi ohjelma tulostaa saaduista luvuista viisi suurinta suuruusjärjestyksess
 Vihje: listan alkioiden lajittelujärjestyksen voi kääntää antamalla sort-metodille
 argumentiksi reverse=True.
 """
-
-UserValue = input("Anna luku: ")
 Values = []
 IndexMax = 0
+
+UserValue = input("Anna luku: ")
 
 while UserValue != "":
       Values.append(float(UserValue))
