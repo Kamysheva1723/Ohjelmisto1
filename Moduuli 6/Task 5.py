@@ -12,7 +12,7 @@ def del_odd(list):
             new_list.append(x)
     return new_list
 
-list = [1,2,3,4,5,6,7,8,9,0, 17, 7654, 890,77]
+list = [0,78,66,67,89,67,45,4,1]
 
 print(f"Alkuperäinen lista {list}")
 print(f"Uusi lista {del_odd(list)}")
