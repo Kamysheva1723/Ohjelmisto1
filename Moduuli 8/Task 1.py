@@ -23,13 +23,17 @@ ident = input("Anna ICAO - koodi: ")
 sql = "select airport.name, country.name  from airport, country " \
       "where ident = '" + ident + "' and airport.iso_country = country.iso_country"
 
-print (sql)
+#print (sql)
 
 kursori = yhteys.cursor()
 kursori.execute(sql)
 tulos = kursori.fetchall()
 
 print (tulos)
+
+#suljetaan yhteys
+yhteys.close()
+
 
 
 
