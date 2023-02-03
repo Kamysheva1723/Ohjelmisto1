@@ -20,7 +20,7 @@ yhteys = mysql.connector.connect(
 
 ident = input("Anna ICAO - koodi: ")
 
-sql = "select airport.name, country.name  from airport, country " \
+sql = "select airport.name, airport.municipality, country.name  from airport, country " \
       "where ident = '" + ident + "' and airport.iso_country = country.iso_country"
 
 #print (sql)
@@ -33,6 +33,10 @@ print (tulos)
 
 #suljetaan yhteys
 yhteys.close()
+
+"""
+if not tulos - проверяет не пустой ли результат запроса
+"""
 
 
 
