@@ -22,15 +22,15 @@ class auto:
 
     def change_speed (self, v):
     # v/abs(v) määrittää onko v positiivisen (sitten se on 1) tai negativiisen (sitten se on -1)
-        if v / abs(v) == 1: # jos nopeus kasvaa
-            while self.current_speed < self.max_speed and v != 0:
-                self.current_speed = self.current_speed + 1
-                v = v - 1
-        else:  # jos nopeus vähenee
-            while self.current_speed > 0 and v != 0:
-                self.current_speed = self.current_speed - 1
-                v = v + 1
-
+        if v != 0:
+             if v / abs(v) == 1: # jos nopeus kasvaa
+                while self.current_speed < self.max_speed and v != 0:
+                     self.current_speed = self.current_speed + 1
+                     v = v - 1
+             else:  # jos nopeus vähenee
+                   while self.current_speed > 0 and v != 0:
+                        self.current_speed = self.current_speed - 1
+                        v = v + 1
     pass
 
 my_auto = auto ("ABC-123", 142)
