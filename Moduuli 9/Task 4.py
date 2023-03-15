@@ -39,7 +39,7 @@ class auto:
 
     pass
 
-#___________right numbers input____________
+#___________ correct numbers input____________
 def input_speed():
     numbers = ["1","2","3","4","5","6","7","8","9","0"]
     while True:
@@ -81,8 +81,8 @@ while kilpailu:
             kilpailu = False
 
 
-print ("{:<8} {:<8} {:<8} {:<8}".format('REKISTERINUMERO','HUIPPUNOPEUS','VIIMEINEN NOPEUS','MATKA'))
+print ("{:<20} {:<15} {:<20} {:<8}".format('REKISTERINUMERO','HUIPPUNOPEUS','VIIMEINEN NOPEUS','MATKA'))
 for car in cars:
-   print ("{:<8} {:<8} {:<8} {:<8}".format(car.reg_number, car.max_speed, car.current_speed, car.dist))
+   print ("{:<20} {:<15} {:<20} {:<8}".format(car.reg_number, car.max_speed, car.current_speed, car.dist))
 
 
