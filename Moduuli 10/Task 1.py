@@ -13,7 +13,7 @@ class Lift:
     def __init__(self, min_floor, max_floor):
         self.min_floor = min_floor
         self.max_floor = max_floor
-        self.current_floor = 1
+        self.current_floor = min_floor
         return
 
     def floor_up(self):
