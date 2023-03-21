@@ -10,7 +10,7 @@ sekä asettaa oman kapasiteettinsa. Kirjoita pääohjelma, jossa luot yhden säh
 Aseta kummallekin autolle haluamasi nopeus, käske autoja ajamaan kolmen tunnin verran
 ja tulosta autojen matkamittarilukemat.
 """
-import random
+
 class Auto:
 
     def __init__(self, reg_number, max_speed):
