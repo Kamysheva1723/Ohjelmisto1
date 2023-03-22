@@ -9,17 +9,17 @@ API-avaimen (API key). Selvitä myös, miten saat Kelvin-asteet muunnettua Celsi
 import json
 import requests
 
-city_name = input("Anna kaupunki: ")
+city_name = input("Input city: ")
 my_api = "434a73a542c8dfbda0c9feeb6671cb1b"
 haku = f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={my_api}"
-print(haku)
+
 
 try:
     vastaus = requests.get(haku)
     if vastaus.status_code==200:
         json_vastaus = vastaus.json()
-        print(json_vastaus)
+        print(f"Temperature in {city_name} is {(json_vastaus['main']['temp'] - 273.15):.1f} degrees.")
 
 except requests.exceptions.RequestException as e:
-    print ("Hakua ei voitu suorittaa.")
+    print (f"Hakua ei voitu suorittaa. Virhe on {e}")
 
