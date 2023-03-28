@@ -27,6 +27,7 @@ def get_data_from_db(code):
     kursori.execute(sql)
     tulos = kursori.fetchone()
     yhteys.close()
+
     return tulos
 
 @app.route('/kenttä/<code>')
@@ -34,12 +35,21 @@ def kenttä(code):
 
     try:
         tulos = get_data_from_db(code)
-        tilakoodi = 200
-        vastaus = {
+        if tulos:
+            tilakoodi = 200
+            vastaus = {
                 "status": tilakoodi,
                 "ICAO": code,
                 "Name": tulos[0],
                 "Municipality": tulos[1]
+            }
+        else:
+            tilakoodi = 200
+            vastaus = {
+                "status": tilakoodi,
+                "ICAO": code,
+                "Name": "not found",
+                "Municipality": "not found"
             }
 
     except ValueError:
