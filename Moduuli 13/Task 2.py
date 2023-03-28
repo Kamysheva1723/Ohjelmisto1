@@ -56,7 +56,7 @@ def kenttä(code):
         tilakoodi = 400
         vastaus = {
             "status": tilakoodi,
-            "teksti": "Virheellinen yhteenlaskettava"
+            "teksti": "Virheellinen yhteenlaskettava..."
         }
 
     jsonvast = json.dumps(vastaus)
